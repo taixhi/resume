@@ -2,21 +2,23 @@
 % Resume in Latex
 % Author : Sourabh Bajaj
 % License : MIT
-%------------------------
+%------------------------¢
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -37,10 +39,11 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\titlerule \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
@@ -49,11 +52,10 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-1pt}\item[]
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-10pt}
+      \textbf{#1} | #2 | \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-8pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -66,10 +68,10 @@
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0mm]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-8pt}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-15pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-8pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,8 +82,8 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{http://taichikato.com/}{\Large Taichi Kato}} & Email : \href{mailto:tkato24@amherst.edu}{tkato24@amherst.edu}\\
-  \href{http://taichikato.com/}{http://taichikato.com} & Mobile : +‭1-413-‭‭2754-569 \\
-\end{tabular*}
+  \href{http://taichikato.com/}{http://taichikato.com} & Mobile : +‭1-413-‭‭275-4569 \\
+\end{tabular*}\vspace{-12pt}
 
 
 %-----------EDUCATION-----------------
@@ -89,18 +91,23 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Amherst College}{Amherst, MA}
-      {Bachelor of Art in Computer Science and Mathematics}{Expected: May. 2024}
+      {Bachelor of Arts in Computer Science and Mathematics}{Expected: May 2024}
        \resumeItemListStart
-	      \resumeItem{\textbf{Honours}: Davis UWC Scholar}
+       	  \resumeItem{\textbf{GPA}: 3.7 / 4.0}
+       	  \resumeItem{\underline{Relevant Coursework}: Artificial Intelligence, Computer Systems, Data Structures, Probability and Computing, Multivariate Calculus, Discrete Mathematics, Advanced Microeconomics and Modern Physics }
+	      \resumeItem{\underline{Honors}: Davis UWC Scholar}
       \resumeItemListEnd
-      \vspace{5pt}
+      \vspace{0pt}
+      \resumeSubHeadingListEnd
+       \resumeSubHeadingListStart
     \resumeSubheading
       {United World College of South East Asia}{Singapore}
-      {International Baccalaureate Diploma, 98th Percentile (43/45)}{Aug. 2013 -- May. 2020}
+      {International Baccalaureate Diploma}{May 2020}
       \resumeItemListStart
-      	  \resumeItem{\textbf{Relevant Coursework}: HL Mathematics, HL Computer Science, HL Physics, SL Philosophy}
-	      \resumeItem{\textbf{Honours}: Bilingual Diploma in Japanese and English}
-	      \resumeItem{\textbf{Thesis}: \textit{Evaluating Marx and Nietzsche's ideas of entfremdung and ressentiment in the context of increased technological automation (Philosophy and Computer Science)}}
+         \resumeItem{\textbf{GPA}: 43/45 (98\textsuperscript{th} percentile)}
+	      \resumeItem{\underline{Honors}: Bilingual Diploma in Japanese and English}
+	      \resumeItem{\underline{Thesis}: Evaluating Marx and Nietzsche's ideas of entfremdung and ressentiment in the context of increased technological automation (Computer Science and Philosophy)}
+	      \resumeItem{\underline{Leadership Activities}: Computer Science Club President; Photography Club President}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -108,85 +115,84 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
+	\resumeSubheading
+	{Amherst College} % Organization
+    {Amherst, MA} % Location
+    {Innovation and Entrepreneurship Intern} % Job title
+    {June 2021-August 2021} % Date(s)
+    \resumeItemListStart
+        \resumeItem {\textbf{Quantitative analysis} on the effectiveness of Entrepreneurship programs at US universities using language analysis with Python. Created a report on entrepreneurship program at Amherst College with recommended funding of \$3 mil.}
+      \resumeItemListEnd
+
     \resumeSubheading
-      {Questo AI}{Singapore}
-      {Co-Founder and Software Engineer}{Nov. 2016 - Aug. 2020} % Date(s)
+      {Questo AI}{Singapore}{Co-Founder and Software Engineer}{November 2016-August 2020}
       \resumeItemListStart
         \resumeItem {\textbf{Built} a service that generates quizzes from learning materials}
-        \resumeItem {\textbf{Pitched} to investors, and was granted \textbf{\$160,000} in subsidised funding from Google and IBM.}
-        \resumeItem {\textbf{Led} a team of three for an organic marketing campaign, attaining \textbf{8,000 downloads} from ProductHunt(\#1, 140+ upvotes) and HackerNews(500+, \#1 Product of the Day)}
         \resumeItem {\textbf{Researched and developed} a novel question generation algorithm modifying a neural translation model, collaborating with two other engineers, using \textbf{Numpy, Pandas, Tensorflow, and PyTorch}. Shipped to production as micro services using \textbf{Python, Flask and Google Cloud}. Developed our deployment pipeline using \textbf{Docker, Kubernetes, and Travis CI}.}
-        \resumeItem {\textbf{Designed and developed} the iOS application using Swift and CoreML}
-         \resumeItem{\textbf{Designed and developed} machine learning solutions for consulting clients, generating \textbf{\$56,000} in revenue.}
-        \resumeItem {\textbf{Awarded} the Overall Winner Student Category @ IBM PitchIT 2016.}
+        \resumeItem {\textbf{Designed and developed} the iOS application using Swift and CoreML, as well as machine learning solutions for consulting clients, generating \textbf{\$56,000} in revenue.}
+        \resumeItem {\textbf{Led} an organic marketing campaign, attaining \textbf{8,000 downloads} from ProductHunt(500+, \#1 Product of the Day) and HackerNews(\#1, 140+ upvotes) and granted \textbf{\$160,000} in subsidised funding from Google Cloud and IBM.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
   \resumeSubHeadingListStart
 	\resumeSubheading
-	{University of Tsukuba, Digital Nature Group} % Organization
+	{University of Tsukuba} % Organization
     {Tsukuba, Japan} % Location
     {Deep Learning Researcher Intern} % Job title
-    {Jul. 2018 – Aug. 2018} % Date(s)
+    {July 2018-August 2018} % Date(s)
     \resumeItemListStart
-        \resumeItem {\textbf{Researched} 2D to 3D extrapolation with GANs under direct mentorship of Prof. Ochyai Yoichi. \textbf{Presented} a poster on the research.}
-        \resumeItem {Conducted literature review of GANs, and presented the findings using \textbf{Powerpoint}}
+        \resumeItem {\textbf{Researched} 2D to 3D extrapolation with GANs under direct mentorship of Prof. Ochyai Yoichi at the Digital Nature Group. \textbf{Presented} a poster on the research.}
       \resumeItemListEnd
 \resumeSubHeadingListEnd
 \resumeSubHeadingListStart
 	\resumeSubheading
     {Mercari, Inc.} % Organization
     {Tokyo, Japan} % Location
-    {Machine Learning Engineer Intern} % Job title
-    {Jun. 2018 - Jul. 2018} % Date(s)
+    {Machine Learning Engineer Intern (16 years old)} % Job title
+    {June 2018-July 2018} % Date(s)
     \resumeItemListStart
-        \resumeItem {Collaborated with senior engineers and researchers to introduce edge computing to the pipeline.}
         \resumeItem {\textbf{Minimized the size} of price prediction and object detection models \textbf{by 70\%} using \textbf{PyTorch and Tensorflow} through quantization and pruning, allowing them to run on mobile devices without sacrificing accuracy.  \textbf{Reduced the cost }required to process listings from \textbf{16 million monthly active users}}
-        \resumeItem {Rapidly \textbf{iterated on, and developed} an iOS prototype which gives price predictions of objects in the camera feed in real time. Youngest employee ever at 16 years old.}
+        \resumeItem {Rapidly developed an iOS prototype which gives real-time price predictions of objects in the camera feed.}
       \resumeItemListEnd
 \resumeSubHeadingListEnd
 \resumeSubHeadingListStart
 	\resumeSubheading
 	{teamLab, Inc.} % Organization
     {Tokyo, Japan} % Location
-    {Software Engineer Intern} % Job title
-    {Jun. 2017 – Jul. 2017} % Date(s)
+    {Software Engineer Intern (15 years old)} % Job title
+    {June 2017-July 2017} % Date(s)
     \resumeItemListStart
-        \resumeItem {\textbf{Initiated and led} the development of an internal Redux framework for iOS, which has been used extensively in company's future projects, {collaborated} with designers, business development, and back-end engineers on developing an iOS applications using \textbf{Swift}. Youngest employee ever at 15 years old.}
+        \resumeItem {\textbf{Initiated and led} the development of an internal Redux framework for iOS, which has been used extensively in company's future projects. {Collaborated} with designers, business development, and back-end engineers on developing an iOS applications using \textbf{Swift}.}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------EXTRA CURRICULARS-----------------
-\section{Activities}
+\section{Extracurricular Activities}
   \resumeSubHeadingListStart
-  	\resumeSubItem{\textbf{Amherst College (2020 - Present)}: Member of the Rowing team, Computer Science Club, Computer Intelligence Lab, Quantitative Trading Club, Investment Club, Philosophy Club, and Asian Students Association}
-  	  \resumeSubItem{\textbf{Lead Organiser of YouthHacks (2017-2019)}: Organised Singapore's largest pre-university hackathon. Raised over \textbf{\$5,000 } for \textbf{180 participants}, from sponsors ranging from National Youth Council, Google, StartupX, and Reactor School. Reached out to mentors, judges and participants through organic marketing; Organised logistics and financing for the event. Held seminars on UI design and on utilising machine learning in hackathons.}
-  	 \resumeSubItem{\textbf{President of UWCSEA Hack Club (2017-2020)}: Taught 30+ computer science students in high school, teaching Python, Javascript, and gave seminars on introduction to machine learning.}
-  	   	 \resumeSubItem{\textbf{President of UWCSEA Photography Club (2018-2020)}: Instructed 20+ young students about fundamentals of photography and photo editing.}
+  	\resumeSubheading
+  	{Amherst College Activities}
+  	{Amherst, MA}{}{}
+ 	 \resumeItemListStart
+  	  	\resumeItem {President of Entrepreneurship Club. Member of Quantitative Trading Club, Poker Club, and Rowing Team.}
+  	  \resumeItemListEnd
+  	  \resumeSubheading{YouthHacks}{Singapore}{Founder/Lead Organiser}{2019-2020}
+  	  \resumeItemListStart
+  	  \resumeItem {Organised Singapore's largest pre-university hackathon, hosting  \textbf{180 participant} with  \textbf{\$5,000} in sponsorships}
+  	  \resumeItemListEnd
 	\resumeSubHeadingListEnd 
 
 
 
 %-----------PROJECTS-----------------
 \section{Projects}
-  \resumeSubHeadingListStart
-  	\resumeSubItem{\textbf{Zipcall (2020)}: Developed multi-client decentralised video-calling service. \textbf{100,000 MAU}.}
-	\resumeSubItem{\textbf{Kafka NLP (2020)}: Developed the first-ever open-source implementation of dependency parsing on iOS}
-	\resumeSubItem{\textbf{Bookworm (2019)}: Awarded the Best Pre-University Hack Prize@NUS Hack'n'Roll (331 hackers). Built a dictionary app which makes physical books interactive, using \textbf{OpenCV and React Native}}
-	\resumeSubItem{\textbf{Photonify (2017)}: \textbf{Awarded \$30,000} for Most Creative@SWSG2017 – (550+ hackers). Built an app that analyses image composition, and displays real time guidance to improve mobile photography.} 
-	\resumeSubItem{\textbf{Hequals (2017)}: \textbf{Awarded \$500} for Pre-University Overall Winning Team @\#codeathon 2017 (73 participating teams). Built a service that assigns GitHub tasks to people in a team based on previous commits, made to reduce bias in tech.} 
-	\resumeSubHeadingListEnd 
-
-%
-%--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-%      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-%    }
-%  \resumeSubHeadingListEnd
-
+  \resumeItemListStart
+    \resumeSubItem{{\textbf{UChicago Trading Competition (2021)}}: Developed a FX market making bot which arbitraged across markets, analysed monetary policies data, and analysed past prices using Python. Placed 5th out of 50 participating teams}
+  	\resumeSubItem{\href{https://github.com/questo-ai/decentralized-video-chat/}{\textbf{Zipcall (2020)}}: Developed multi-client decentralised video-calling service as a contributor. \textbf{100,000 MAU}}
+	\resumeSubItem{\href{https://github.com/questo-ai/Kafka/}{\textbf{Kafka NLP (2020)}}: Developed the first-ever open-source implementation of dependency parsing on iOS}
+	\resumeSubItem{\href{https://devpost.com/software/bookworm-aye8z5}{\textbf{Bookworm (2019)}}: Awarded the Best Pre-University Hack Prize@NUS Hack'n'Roll (331 hackers); built a dictionary app which makes physical books interactive, using \textbf{OpenCV and React Native}}
+	\resumeSubItem{\textbf{Photonify (2017)}: \textbf{Awarded \$30,000} for Most Creative@SWSG2017 – (550+ hackers); built an app that analyses image composition, and displays real time guidance to improve mobile photography}
+	\resumeItemListEnd 
+	
+ \section{Skills}\small{ Leadership, Teamwork, Collaboration, C, C++, Swift, Objective-C, Python, React, Javascript, SQL, Java, Testing, OOP, Tensorflow, scikit-learn, Algorithms, Git, AWS, GCP, Jupyter Notebooks }
 
 %-------------------------------------------
 \end{document}
